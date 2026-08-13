@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EyesCare 爱视可中文官网 Demo：空间光学读写台，让读写回到该有的距离。" />
+    <title>EyesCare 爱视可｜空间光学读写台 Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <header class="site-header" data-nav>
+      <div class="site-header__inner">
+        <a class="brand" href="#hero" aria-label="EyesCare 爱视可首页">
+          <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-name">爱视可</span>
+        </a>
+        <nav class="header-actions" aria-label="主导航">
+          <a class="header-link" href="#app">小程序入口 <b>›</b></a>
+          <button class="header-pill header-pill--gold" data-open-trial><span>⌖</span> 会面的地方 <b>›</b></button>
+          <a class="header-pill header-pill--brown" href="#compare"><span>▱</span> 型号与配置 <b>›</b></a>
+          <button class="header-pill header-pill--menu" data-menu-toggle>MENU <span class="menu-dots">•••</span></button>
+        </nav>
+      </div>
+    </header>
+
+    <aside class="menu-panel" data-menu-panel aria-hidden="true">
+      <div class="menu-panel__inner">
+        <button class="menu-close" data-menu-toggle aria-label="关闭菜单">×</button>
+        <a href="#product">产品是什么</a>
+        <a href="#philosophy">我们的理念</a>
+        <a href="#optics">光学证据</a>
+        <a href="#compare">型号对比</a>
+        <a href="#voices">家庭口碑</a>
+        <button data-open-trial>预约体验</button>
+      </div>
+    </aside>
+
+    <div class="review-strip" id="voices" aria-label="演示口碑">
+      <div class="review-strip__inner">
+        <strong>爱视可</strong>
+        <span class="stars">★★★★★</span>
+        <span>4.8</span>
+        <button data-pause-voices aria-pressed="false">演示口碑</button>
+        <p data-review-ticker>“孩子开始愿意把作业留在书桌上完成。”</p>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-frame">
+          <img src="./assets/hero-family.jpg" alt="父亲陪孩子在自然光书桌前写作业" />
+          <div class="hero-shade"></div>
+          <div class="hero-device" aria-hidden="true">
+            <div class="hero-device__mirror"><span>远处的书</span></div>
+            <div class="hero-device__hinge"></div>
+            <div class="hero-device__base"><i></i><b>EyesCare</b></div>
+            <div class="hero-device__paper">纸笔</div>
+          </div>
+          <div class="hero-caption reveal-section">
+            <p>空间光学读写台</p>
+            <h1 id="hero-title"><span>远像 × 全光谱</span><span>= 爱视可</span></h1>
+            <small>为被爱着的眼睛，重新设计读写。</small>
+            <div class="hero-actions">
+              <a href="#product">了解读写台</a>
+              <button data-open-trial>预约体验</button>
+            </div>
+          </div>
+          <button class="hero-play" data-open-trial aria-label="预约体验"><span>体验</span><i>↗</i></button>
+          <span class="photo-note">[替换：爱视可家庭实拍影片与产品渲染]</span>
+        </div>
+      </section>
+
+      <div class="home-white">
+        <section class="product-intro" id="product" aria-labelledby="formula-title">
+          <div class="product-intro__copy reveal-section">
+            <p class="section-label">DISTANCE × SPECTRUM = EYESCARE</p>
+            <h2 id="formula-title">为长时间读写而生的<br />家庭空间光学读写台</h2>
+            <p>不是另一盏台灯。它把近处的书和屏幕，送到数米之外去看。桌面仍是熟悉的纸笔，读写距离从这里重新开始。</p>
+            <div class="link-row"><a class="outline-link" href="#optics">了解爱视可</a><button class="text-button" data-open-trial>预约体验 ›</button></div>
+          </div>
+          <div class="product-stage reveal-section" aria-label="产品示意图">
+            <div class="product-device">
+              <div class="product-mirror"></div>
+              <div class="product-light"></div>
+              <div class="product-base"><span>EyesCare</span></div>
+              <div class="product-paper">纸笔</div>
+            </div>
+            <span>[替换：空间光学读写台产品立绘]</span>
+          </div>
+        </section>
+
+        <section class="proof-wrap" id="trust">
+          <div class="proof-numbers reveal-section">
+            <p class="section-label">FOR THE FAMILY DESK</p>
+            <h2><span data-count="10">0</span>m 以内的远像距离，<br />让近处的内容去到远处。</h2>
+            <div class="gauge-row">
+              <div class="gauge"><div><strong><span data-count="97">0</span>+</strong><small>Ra 高显色</small></div></div>
+              <div class="gauge gauge--second"><div><strong><span data-count="230">0</span></strong><small>nits 入眼亮度</small></div></div>
+            </div>
+            <p class="footnote">演示数据，上线前替换。远像距离手动约 2–10m，电动约 2.5–10m；不构成医疗建议。</p>
+          </div>
+          <div class="owner-voices reveal-section">
+            <h2>家庭书桌上的声音</h2>
+            <div class="owner-rating"><u>演示口碑</u><span class="stars">★★★★★</span><strong>4.8/5</strong></div>
+            <div class="voice-preview" data-voice-track>
+              <article><div class="voice-photo voice-photo--one"></div><p>写作业时，纸笔没有变，只是眼睛不再一直盯着近处。</p></article>
+              <article><div class="voice-photo voice-photo--two"></div><p>我们陪在旁边，不再只剩下一句“坐直一点”。</p></article>
+              <article><div class="voice-photo voice-photo--three"></div><p>第一次体验远像，30 秒就明白它是什么。</p></article>
+            </div>
+            <a class="wide-outline" href="#message">查看更多家庭故事 ›</a>
+          </div>
+        </section>
+      </div>
+
+      <section class="philosophy" id="philosophy" aria-labelledby="philosophy-title">
+        <div class="philosophy-bg"></div>
+        <div class="philosophy-copy reveal-section">
+          <p class="section-label">MADE FOR DAILY LIFE.</p>
+          <h2 id="philosophy-title">为被爱着的眼睛，<br />做一件每天会打开的东西。</h2>
+          <p>光学不是炫技，是让读写姿势回到自然。灯光不是更亮，是更像白天。智能不是监视，是人在时才工作。</p>
+          <a class="outline-link outline-link--white" href="#philosophy-page">了解理念</a>
+        </div>
+      </section>
+
+      <section class="evidence" id="optics" aria-labelledby="evidence-title">
+        <div class="evidence-copy reveal-section">
+          <p class="section-label">THIRD-PARTY OPTICAL TEST</p>
+          <h2 id="evidence-title">全光谱，是给眼睛的诚实光线</h2>
+          <p>3500K、4000K、5000K 三档色温，跟着一天的节奏走。蓝光危害按 RG0 档表述，把复杂测试翻译成家里听得懂的话。</p>
+          <div class="temperature-tabs" role="tablist" aria-label="色温三档切换">
+            <button class="active" role="tab" aria-selected="true" data-temp="3500">3500K</button>
+            <button role="tab" aria-selected="false" data-temp="4000">4000K</button>
+            <button role="tab" aria-selected="false" data-temp="5000">5000K</button>
+          </div>
+          <small>第三方光谱/护眼性能测试报告；不作国际权威认证宣传。</small>
+          <a class="outline-link" href="#optics-page">了解详情</a>
+        </div>
+        <div class="evidence-image temp-3500" data-temperature-stage>
+          <img src="./assets/light-desk.jpg" alt="全光谱照明下的纸笔桌面" />
+          <span>[替换：爱视可光谱测试与书写场景]</span>
+        </div>
+      </section>
+
+      <section class="distance-feature" aria-labelledby="distance-title">
+        <div class="distance-feature__visual">
+          <div class="distance-book">近处的书</div>
+          <div class="distance-mirror"></div>
+          <div class="distance-virtual" data-virtual-book>远处的书</div>
+        </div>
+        <div class="distance-feature__copy reveal-section">
+          <p class="section-label">SPATIAL OPTICS</p>
+          <h2 id="distance-title">孩子看见的是远处的书。</h2>
+          <p>桌面还是熟悉的纸笔。拖动距离，感受从近桌面到远像阅读的变化。</p>
+          <label for="distanceRange">远像距离 <strong><span data-distance-output>6</span>m</strong></label>
+          <input id="distanceRange" type="range" min="2" max="10" step="0.5" value="6" data-distance-range />
+          <div class="range-scale"><span>2m</span><span>10m</span></div>
+        </div>
+      </section>
+
+      <section class="fold-feature" aria-labelledby="fold-title">
+        <div class="fold-copy reveal-section">
+          <p class="section-label">OPEN / CLOSE</p>
+          <h2 id="fold-title">打开，是读写台。<br />收起，还是一张安静书桌。</h2>
+          <p>前盖与平面镜随使用展开。合上以后，不打扰家的秩序。</p>
+          <button class="outline-link outline-link--white" data-toggle-fold>收起前盖</button>
+        </div>
+        <div class="fold-demo" data-fold-demo>
+          <div class="base"></div><div class="lid"></div><div class="mirror"></div><div class="paper">纸笔</div>
+        </div>
+      </section>
+
+      <section class="compare" id="compare" aria-labelledby="compare-title">
+        <h2 id="compare-title">比较型号</h2>
+        <div class="compare-columns">
+          <article class="compare-model">
+            <div class="compare-render compare-render--pro"><span>Pro</span></div>
+            <h3>EyesCare Pro</h3><div class="model-rating"><span class="stars">★★★★★</span> 4.8 · 演示评价</div>
+            <p>小程序 + 手动远像，屏幕可选</p><strong>¥5,980</strong><small>演示策略价，非正式零售价</small>
+            <button class="outline-link" data-open-trial>预约体验</button>
+            <div class="spec-list">
+              <div><i>◉</i><b>远像距离</b><span>手动约 2–10m</span></div>
+              <div><i>☀</i><b>全光谱照明</b><span>3500K / 4000K / 5000K</span></div>
+              <div><i>RG0</i><b>蓝光危害</b><span>RG0 档表述</span></div>
+              <div><i>▣</i><b>控制</b><span>2.79 寸 · 小程序</span></div>
+              <div><i>—</i><b>摄像头</b><span>无摄像头</span></div>
+              <div><i>▱</i><b>远像屏</b><span>13.3 寸屏可选</span></div>
+              <div><i>⌁</i><b>隐私</b><span>无需采集原始画面</span></div>
+            </div>
+          </article>
+          <article class="compare-model compare-model--featured">
+            <em>主推</em><div class="compare-render compare-render--max"><span>Max</span></div>
+            <h3>EyesCare Max</h3><div class="model-rating"><span class="stars">★★★★★</span> 4.8 · 演示评价</div>
+            <p>AI + 手动远像，屏幕可选</p><strong>¥6,980</strong><small>演示策略价，非正式零售价</small>
+            <button class="outline-link" data-open-trial>预约体验</button>
+            <div class="spec-list">
+              <div><i>◉</i><b>远像距离</b><span>手动约 2–10m</span></div>
+              <div><i>☀</i><b>全光谱照明</b><span>高显色 · 开盖自动亮灯</span></div>
+              <div><i>RG0</i><b>蓝光危害</b><span>RG0 档表述</span></div>
+              <div><i>▣</i><b>控制</b><span>3.1 寸触控 · 语音 · 小程序</span></div>
+              <div><i>◌</i><b>人在感应</b><span>人来工作，人走关闭</span></div>
+              <div><i>▱</i><b>远像屏</b><span>13.3 寸 2560×1600 可选</span></div>
+              <div><i>⌁</i><b>隐私</b><span>原始画面不存不传</span></div>
+            </div>
+          </article>
+          <article class="compare-model">
+            <div class="compare-render compare-render--ultra"><span>Ultra</span></div>
+            <h3>EyesCare Ultra</h3><div class="model-rating"><span class="stars">★★★★★</span> 4.8 · 演示评价</div>
+            <p>AI + 电动远像，屏幕标配</p><strong>¥11,980</strong><small>演示策略价，非正式零售价</small>
+            <button class="outline-link" data-open-trial>预约体验</button>
+            <div class="spec-list">
+              <div><i>◉</i><b>远像距离</b><span>电动约 2.5–10m</span></div>
+              <div><i>☀</i><b>全光谱照明</b><span>高显色 · 开盖自动亮灯</span></div>
+              <div><i>RG0</i><b>蓝光危害</b><span>RG0 档表述</span></div>
+              <div><i>▣</i><b>控制</b><span>3.1 寸触控 · 语音 · 小程序</span></div>
+              <div><i>◌</i><b>人在感应</b><span>人来工作，人走关闭</span></div>
+              <div><i>▱</i><b>远像屏</b><span>13.3 寸 2560×1600 标配</span></div>
+              <div><i>⌁</i><b>隐私</b><span>原始画面不存不传</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="technology" aria-labelledby="tech-title">
+        <div class="technology-bg"></div>
+        <div class="technology-copy reveal-section">
+          <p class="section-label">TECHNOLOGY FOR DAILY CARE</p>
+          <h2 id="tech-title">革新的光学，<br />是为了每天被自然地使用。</h2>
+          <p>远像、全光谱、人在感应。先讲人话，再讲技术。</p>
+          <a class="outline-link outline-link--white" href="#optics-page">了解科技</a>
+        </div>
+      </section>
+
+      <section class="accessory" id="app" aria-labelledby="accessory-title">
+        <div class="accessory-copy reveal-section">
+          <p class="section-label">13.3" DISTANT-VIEW SCREEN</p>
+          <h2 id="accessory-title">接上屏，书桌变成远像屏幕。</h2>
+          <p>2560×1600、3A 膜、默认镜像、磁吸。不是又一块刺眼平板，而是把屏幕内容放到更远处。</p>
+          <a class="outline-link" href="#app-page">了解远像屏</a>
+        </div>
+        <div class="accessory-screen"><span>13.3"</span><b>远像屏</b><small>[替换：远像屏产品实拍]</small></div>
+      </section>
+
+      <div class="message-zone" id="message">
+        <section class="message-card">
+          <div class="message-overlay reveal-section">
+            <p>MESSAGE</p><h2>远像 × 全光谱 = 爱视可</h2>
+            <strong>想象一种新的读写距离。让它从每天的书桌上，慢慢成为家庭习惯。</strong>
+            <a class="outline-link outline-link--white" href="#philosophy-page">了解品牌故事</a>
+          </div>
+        </section>
+
+        <section class="entry-grid" aria-label="更多入口">
+          <article><div class="entry-image entry-image--trial"></div><h3>门店体验</h3><p>亲眼看看远像如何把近处的纸笔送到远处。</p><button class="outline-link" data-open-trial>预约体验</button></article>
+          <article><div class="entry-image entry-image--mini"></div><h3>FUTURUS 爱视可小程序</h3><p>查看读写时长、使用记录与积分奖励。</p><a class="outline-link" href="#miniapp">打开小程序</a></article>
+          <article><div class="entry-image entry-image--screen"></div><h3>远像屏与配件</h3><p>把学习屏幕也带到更合适的观看距离。</p><a class="outline-link" href="#app-page">了解配件</a></article>
+          <article id="trial"><div class="entry-image entry-image--dealer"></div><h3>经销商咨询</h3><p>了解体验门店、合作方式与售后支持。</p><button class="outline-link" data-open-trial>立即咨询</button></article>
+        </section>
+      </div>
+
+      <section class="subpages" aria-label="Demo 子页锚点">
+        <article id="product-page"><h2>产品</h2><p>空间光学读写台。</p></article>
+        <article id="optics-page"><h2>科技</h2><p>远像、全光谱与隐私。</p></article>
+        <article id="philosophy-page"><h2>理念</h2><p>让读写回到该有的距离。</p></article>
+        <article id="app-page"><h2>小程序</h2><p>FUTURUS 爱视可入口占位。</p></article>
+      </section>
+    </main>
+
+    <footer class="footer" id="miniapp">
+      <div class="footer-brand"><strong>爱视可</strong><p>让读写，回到该有的距离。</p></div>
+      <div class="footer-links"><a href="#product">产品</a><a href="#philosophy">理念</a><a href="#optics">科技</a><a href="#compare">型号对比</a><a href="#trial">预约体验</a><a href="#miniapp">小程序</a></div>
+      <div class="footer-meta"><span>隐私</span><span>售后</span><span>备案号占位</span><span>Demo 内容上线前替换</span></div>
+    </footer>
+
+    <div class="mobile-sticky"><a class="outline-link" href="#compare">选择型号</a><button data-open-trial>预约体验</button></div>
+
+    <aside class="drawer" data-drawer aria-hidden="true" aria-labelledby="drawer-title">
+      <div class="drawer-panel" role="dialog" aria-modal="true">
+        <button class="drawer-close" data-close-trial aria-label="关闭预约抽屉">×</button>
+        <p class="section-label">TRIAL</p><h2 id="drawer-title">预约门店体验</h2><p>只收体验意向，不收款。</p>
+        <form data-trial-form>
+          <label>姓名<input name="name" required autocomplete="name" /></label>
+          <label>城市<input name="city" required autocomplete="address-level2" /></label>
+          <label>孩子年级<select name="grade" required><option value="">请选择</option><option>幼儿园</option><option>小学低年级</option><option>小学高年级</option><option>初中及以上</option><option>家长自用</option></select></label>
+          <label>意向型号<select name="model" required><option>EyesCare Max</option><option>EyesCare Pro</option><option>EyesCare Ultra</option><option>先体验再决定</option></select></label>
+          <button class="submit-button" type="submit">提交预约</button>
+        </form>
+      </div>
+    </aside>
+    <div class="toast" data-toast role="status" aria-live="polite">预约已提交，我们会尽快联系你。</div>
+
+    <script src="./vendor/gsap/gsap.min.js"></script>
+    <script src="./vendor/gsap/ScrollTrigger.min.js"></script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
