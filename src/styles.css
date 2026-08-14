@@ -76,7 +76,7 @@ p{font-size:15px;line-height:2;letter-spacing:.025em}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
 
 /* Fidelity pass: cinematic hero, optical device presence, lighter typography. */
-.hero-frame>img{object-position:center 58%;filter:saturate(.68) brightness(.78) contrast(.98) sepia(.08)}
+.hero-frame>img{object-position:center 54%;filter:saturate(.82) brightness(.84) contrast(1.02) sepia(.04)}
 .hero-shade{background:linear-gradient(0deg,rgba(25,18,14,.72),rgba(25,18,14,.04) 62%),linear-gradient(90deg,rgba(25,18,14,.34),transparent 55%),linear-gradient(180deg,rgba(25,18,14,.08),transparent 30%)}
 .hero-caption{left:5.1%;bottom:6.8%;max-width:560px;text-shadow:0 1px 20px #0004}
 .hero-caption>p{font-size:13px;font-weight:500;letter-spacing:.08em}
@@ -100,7 +100,8 @@ p{font-size:15px;line-height:2;letter-spacing:.025em}
 .hero-device__base b{position:absolute;right:7%;bottom:14%;font-family:Lato,sans-serif;font-size:10px;font-weight:400;letter-spacing:.06em;color:#716f6a}
 .hero-device__paper{position:absolute;left:24%;bottom:8.5%;z-index:2;width:48%;height:16%;display:grid;place-items:center;background:linear-gradient(105deg,#fff,#eee9df);clip-path:polygon(0 12%,48% 0,100% 14%,94% 100%,48% 90%,4% 100%);color:#777;font-size:9px;letter-spacing:.06em;box-shadow:0 4px 12px #0002}
 .product-intro__copy h2,.proof-numbers h2,.owner-voices h2,.philosophy h2,.evidence h2,.distance-feature h2,.fold-feature h2,.technology h2,.accessory h2{font-weight:300;letter-spacing:.025em;color:#626262}
-.product-stage{align-self:stretch;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 48%,rgba(246,242,234,.86),transparent 58%)}
+.product-stage{align-self:stretch;display:flex;align-items:center;justify-content:center;background:#f7f3ed}
+.product-stage>img{width:100%;height:100%;object-fit:cover;object-position:68% center;filter:saturate(.82) contrast(.98)}
 .product-device{filter:drop-shadow(0 28px 30px rgba(67,54,43,.18));transform:scale(1.08)}
 .product-mirror{border-width:6px;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(187,198,199,.5));box-shadow:inset 0 0 0 1px #fff,0 0 40px #f1db9b38}
 .product-base{background:linear-gradient(115deg,#8a8984,#f4f0e9 31%,#aaa7a0 63%,#f9f6f0)}
@@ -117,17 +118,18 @@ p{font-size:15px;line-height:2;letter-spacing:.025em}
 .site-header.is-scrolled{background:#fffffff0;backdrop-filter:blur(18px);box-shadow:0 6px 22px #29170c12}
 
 @media(max-width:1023px){
-  .hero-frame>img{object-position:44% center}
+  .hero-frame>img{object-position:52% center}
   .hero-caption{left:24px;right:24px;bottom:46px;max-width:330px}
   .hero-actions{margin-top:16px}
   .hero-actions a,.hero-actions button{height:40px;padding:0 17px;font-size:12px}
   .hero-device{right:-22%;bottom:0;width:92%;height:55%;opacity:.93;transform:perspective(800px) rotateY(-10deg) scale(.88);transform-origin:right bottom}
   .hero-play{display:none}
-  .product-stage{background:radial-gradient(circle at 50% 52%,rgba(246,242,234,.9),transparent 62%)}
+  .product-stage{background:#f7f3ed}
+  .product-stage>img{object-position:66% center}
   .product-device{transform:scale(.78)}
 }
 @media(max-width:520px){
-  .hero-frame>img{object-position:38% center;filter:saturate(.62) brightness(.72) contrast(.98) sepia(.08)}
+  .hero-frame>img{object-position:70% center;filter:saturate(.76) brightness(.78) contrast(1.01) sepia(.04)}
   .hero-caption{bottom:34px;max-width:310px}
   .hero-caption h1{font-size:29px;line-height:1.34}
   .hero-caption small{font-size:12px}
