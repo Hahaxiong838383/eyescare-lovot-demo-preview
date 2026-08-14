@@ -139,3 +139,8 @@ p{font-size:15px;line-height:2;letter-spacing:.025em}
   .product-device{transform:scale(.67);margin-left:-22px}
 }
 @media(prefers-reduced-motion:reduce){.hero-actions a,.hero-actions button,.hero-play{transform:none!important}}
+
+.brand{display:flex;align-items:center;flex:0 0 auto}
+.brand-logo{display:block;width:150px;height:auto;object-fit:contain}
+@media(max-width:1023px){.brand-logo{width:116px}}
+@media(max-width:420px){.brand-logo{width:108px}.header-pill--menu{padding-inline:12px}}
