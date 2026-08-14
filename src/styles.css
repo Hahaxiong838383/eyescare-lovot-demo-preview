@@ -144,3 +144,7 @@ p{font-size:15px;line-height:2;letter-spacing:.025em}
 .brand-logo{display:block;width:150px;height:auto;object-fit:contain}
 @media(max-width:1023px){.brand-logo{width:116px}}
 @media(max-width:420px){.brand-logo{width:108px}.header-pill--menu{padding-inline:12px}}
+
+.hero-frame>img,.hero-caption,.product-intro__copy,.product-stage>img,.proof-numbers,.owner-voices,.philosophy-bg,.philosophy-copy,.evidence-copy,.evidence-image>img,.distance-feature__visual,.distance-feature__copy,.fold-copy,.fold-demo,.compare-model,.technology-bg,.technology-copy,.accessory-copy,.accessory-screen,.entry-grid article{will-change:transform;backface-visibility:hidden}
+.product-stage,.evidence-image,.philosophy,.technology,.accessory,.message-card{isolation:isolate;overflow:hidden}
+@media(prefers-reduced-motion:reduce){.hero-frame>img,.hero-caption,.product-intro__copy,.product-stage>img,.proof-numbers,.owner-voices,.philosophy-bg,.philosophy-copy,.evidence-copy,.evidence-image>img,.distance-feature__visual,.distance-feature__copy,.fold-copy,.fold-demo,.compare-model,.technology-bg,.technology-copy,.accessory-copy,.accessory-screen,.entry-grid article{will-change:auto;transform:none!important}}

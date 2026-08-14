@@ -116,6 +116,7 @@ if(leaked.length) console.warn('禁用词检查命中：',leaked);
 
 if (!reducedMotion && window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
   gsap.utils.toArray('.reveal-section:not(.hero-caption)').forEach((element) => {
     gsap.from(element,{autoAlpha:0,y:48,duration:1.05,ease:'power3.out',scrollTrigger:{trigger:element,start:'top 88%',toggleActions:'play none none none'}});
   });
@@ -124,7 +125,60 @@ if (!reducedMotion && window.gsap && window.ScrollTrigger) {
     .from('.hero-caption h1 span',{autoAlpha:0,y:30,duration:.85,stagger:.12},'-=.42')
     .from('.hero-caption>small',{autoAlpha:0,y:16,duration:.65},'-=.5')
     .from('.hero-actions>*',{autoAlpha:0,y:14,duration:.55,stagger:.08},'-=.4')
-    .from('.hero-device',{autoAlpha:0,x:70,duration:1.15},'-=.95');
-  gsap.fromTo('.hero-frame img',{scale:1.045},{scale:1,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
-  gsap.fromTo('.technology-bg',{scale:1.08},{scale:1,ease:'none',scrollTrigger:{trigger:'.technology',start:'top bottom',end:'bottom top',scrub:1.2}});
+    .from('.hero-play',{autoAlpha:0,scale:.8,duration:.7},'-=.7');
+
+  const parallax = (target, trigger, fromVars, toVars, scrub = 1.2) => {
+    gsap.fromTo(target, fromVars, {
+      ...toVars,
+      ease: 'none',
+      scrollTrigger: {
+        trigger,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub,
+        invalidateOnRefresh: true
+      }
+    });
+  };
+
+  const motionMedia = gsap.matchMedia();
+  motionMedia.add('(min-width: 1024px)', () => {
+    parallax('.hero-frame img','.hero',{scale:1.045,yPercent:-3},{scale:1.09,yPercent:12},1);
+    parallax('.hero-caption','.hero',{yPercent:7},{yPercent:-24},.9);
+    parallax('.product-intro__copy','.product-intro',{yPercent:12},{yPercent:-13},1.25);
+    parallax('.product-stage img','.product-intro',{scale:1.08,yPercent:-7},{scale:1.08,yPercent:8},1.35);
+    parallax('.proof-numbers','.proof-wrap',{yPercent:10},{yPercent:-12},1.35);
+    parallax('.owner-voices','.proof-wrap',{yPercent:-7},{yPercent:10},1.5);
+    parallax('.philosophy-bg','.philosophy',{scale:1.14,yPercent:-7},{scale:1.14,yPercent:8},1.45);
+    parallax('.philosophy-copy','.philosophy',{yPercent:11},{yPercent:-13},1.1);
+    parallax('.evidence-copy','.evidence',{yPercent:10},{yPercent:-12},1.25);
+    parallax('.evidence-image img','.evidence',{scale:1.1,yPercent:-7},{scale:1.1,yPercent:8},1.4);
+    parallax('.distance-feature__visual','.distance-feature',{yPercent:-5},{yPercent:8},1.35);
+    parallax('.distance-feature__copy','.distance-feature',{yPercent:11},{yPercent:-12},1.1);
+    parallax('.fold-copy','.fold-feature',{yPercent:12},{yPercent:-13},1.1);
+    parallax('.fold-demo','.fold-feature',{yPercent:-6},{yPercent:8},1.4);
+    gsap.utils.toArray('.compare-model').forEach((model,index) => {
+      const offsets = [[11,-12],[-7,9],[14,-15]][index] || [8,-8];
+      parallax(model,'.compare',{yPercent:offsets[0]},{yPercent:offsets[1]},1.25 + index * .12);
+    });
+    parallax('.technology-bg','.technology',{scale:1.16,yPercent:-8},{scale:1.16,yPercent:10},1.55);
+    parallax('.technology-copy','.technology',{yPercent:18},{yPercent:-25},1.2);
+    parallax('.accessory-copy','.accessory',{yPercent:12},{yPercent:-14},1.15);
+    parallax('.accessory-screen','.accessory',{yPercent:-8},{yPercent:9},1.45);
+    gsap.fromTo('.message-card',{backgroundPosition:'50% 35%'},{backgroundPosition:'50% 68%',ease:'none',scrollTrigger:{trigger:'.message-card',start:'top bottom',end:'bottom top',scrub:1.4}});
+    gsap.utils.toArray('.entry-grid article').forEach((card,index) => {
+      parallax(card,'.entry-grid',{yPercent:index % 2 ? 7 : 13},{yPercent:index % 2 ? -9 : -14},1.25 + index * .08);
+    });
+  });
+
+  motionMedia.add('(max-width: 1023px)', () => {
+    parallax('.hero-frame img','.hero',{scale:1.03,yPercent:-2},{scale:1.06,yPercent:7},1.15);
+    parallax('.hero-caption','.hero',{yPercent:4},{yPercent:-10},1);
+    parallax('.product-stage img','.product-intro',{scale:1.04,yPercent:-3},{scale:1.04,yPercent:5},1.3);
+    parallax('.philosophy-bg','.philosophy',{scale:1.1,yPercent:-4},{scale:1.1,yPercent:5},1.4);
+    parallax('.evidence-image img','.evidence',{scale:1.06,yPercent:-3},{scale:1.06,yPercent:5},1.35);
+    parallax('.technology-bg','.technology',{scale:1.1,yPercent:-4},{scale:1.1,yPercent:6},1.45);
+  });
+
+  window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
 }
